@@ -1,0 +1,333 @@
+/*
+  s236578Style.css
+  Change the colours, spacing, and text styles here to update the theme.
+  Use this file to adjust the early 2000s desktop look and the mobile layout.
+*/
+
+:root {
+  --bg-page: #f3e8d5;
+  --bg-soft: #fffaf1;
+  --panel: #fffdf8;
+  --nav-dark: #1a2d4d;
+  --nav-blue: #2b5ca9;
+  --nav-light: #6c8dc6;
+  --accent-pink: #ff5b7f;
+  --accent-yellow: #f7c66a;
+  --accent-green: #7fcdb8;
+  --text: #1f2330;
+  --muted: #4c546d;
+  --border: #c79c5f;
+  --shadow: rgba(12, 20, 36, 0.18);
+  --max-width: 1100px;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, #fdf8f0 0%, #f3e8d5 18%, #f7f0dd 100%);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p,
+ul,
+li,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 800px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 20;
+  padding: 0.75rem 1rem;
+  background: var(--nav-dark);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.site-header {
+  background: linear-gradient(180deg, var(--nav-dark), var(--nav-blue));
+  color: #fff;
+  border-bottom: 4px solid var(--accent-yellow);
+  box-shadow: 0 4px 0 var(--shadow);
+}
+
+.nav-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.brand-box {
+  background: linear-gradient(180deg, var(--accent-pink), #cf426e);
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-list a {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.45rem 0.8rem;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  background: rgba(247,198,106,0.22);
+  border-color: #fff;
+  outline: none;
+}
+
+.hero-section {
+  background: linear-gradient(180deg, #fef7ee 0%, #f3e8d5 100%);
+  padding: var(--space-xl) 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--nav-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.76rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  max-width: 45rem;
+}
+
+.primary-button {
+  display: inline-block;
+  background: linear-gradient(180deg, var(--accent-pink), #d33d67);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 0 rgba(83, 34, 50, 0.35);
+  font-weight: 700;
+}
+
+.primary-button:hover,
+.primary-button:focus-visible {
+  filter: brightness(1.05);
+  outline: none;
+}
+
+.profile-card {
+  background: var(--panel);
+  border: 4px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 0 var(--shadow);
+}
+
+.profile-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
+}
+
+.profile-card li::before {
+  content: "✦ ";
+  color: var(--accent-pink);
+  font-weight: 700;
+}
+
+.content-section {
+  padding: var(--space-xl) 0;
+}
+
+.alt-section {
+  background: rgba(91, 123, 176, 0.08);
+  border-top: 3px solid var(--border);
+  border-bottom: 3px solid var(--border);
+}
+
+h2 {
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.skills-layout,
+.more-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.skills-list li {
+  background: var(--panel);
+  border: 3px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1rem 1rem 1.1rem;
+  box-shadow: 4px 4px 0 rgba(171, 123, 70, 0.12);
+}
+
+.image-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.image-stack img {
+  width: 100%;
+  background: #fff;
+  border: 4px solid var(--nav-blue);
+  padding: 0.4rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 0 rgba(58, 96, 146, 0.25);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+  background: var(--panel);
+  border: 4px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 0 rgba(91, 120, 160, 0.16);
+}
+
+.contact-list a {
+  color: var(--nav-dark);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.contact-list a:focus-visible,
+.contact-list a:hover {
+  outline: 3px solid var(--accent-pink);
+  outline-offset: 2px;
+}
+
+.site-footer {
+  background: var(--nav-dark);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-pink);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .hero-grid,
+  .skills-layout,
+  .more-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrap {
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    gap: 0.3rem;
+  }
+
+  .nav-list a {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/*
+  Change the main colours here if you want a different palette.
+  Adjust the spacing values near the top to make sections tighter or wider.
+*/
